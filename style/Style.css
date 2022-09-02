@@ -1,0 +1,42 @@
+h1{
+
+text-align: center;
+font-size:60px;
+
+
+}
+.grid{
+display: grid;
+grid-template-columns: 300px 300px 300px;
+column-gap: 16px;
+row-gap: 15px;
+
+
+}
+
+
+.recipe-card{
+
+    display:inline-block;
+    width: 300px;
+    background-color: yellow;
+    border-color: black;
+    border-width: 3px;
+    box-shadow: 2px 2px 2px 2px;
+    text-align: center;
+
+
+
+}
+
+.steps p{
+
+    font-size: 20px;
+
+
+}
+.description p{
+
+    font-size: 20px;
+
+}
