@@ -5,25 +5,28 @@ font-size:60px;
 
 
 }
-.grid{
-display: grid;
-grid-template-columns: 300px 300px 300px;
-column-gap: 16px;
-row-gap: 15px;
+.flex-recipes{
+padding: 20px;
+display: flex;
+justify-content: center;
+Flex-wrap: wrap;
+gap: 15px;
 
 
 }
 
 
-.recipe-card{
 
-    display:inline-block;
+.recipe-card{
+  
+    
     width: 300px;
     background-color: yellow;
     border-color: black;
     border-width: 3px;
     box-shadow: 2px 2px 2px 2px;
     text-align: center;
+    
 
 
 
@@ -39,4 +42,31 @@ row-gap: 15px;
 
     font-size: 20px;
 
+}
+.header-container{
+ background-color: yellow;
+ color: black;   
+ display: flex;
+ justify-content: ;
+ 
+
+}
+.logo-svg{
+  width: 80px;
+  margin-left: 10px;
+}
+
+.header{
+    border: 2px solid #fff;
+    width: 900px;
+    height: 150px;
+    display:flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.socials{
+    margin-right: 10px;
 }
