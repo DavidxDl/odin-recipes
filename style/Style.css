@@ -61,6 +61,7 @@ gap: 15px;
     position: relative;
     top:0;
     transition: top ease 0.2s;
+    color: ;
 }
 .recipe-card:hover{
     top: -10px;
@@ -111,5 +112,11 @@ gap: 15px;
 width: 200px;
 height: 100px;
 background-color: yellow;
+
+}
+.recipe-card a {
+    text-decoration: none;
+    color:rgb(31, 151, 31);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
