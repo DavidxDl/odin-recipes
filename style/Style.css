@@ -13,6 +13,7 @@
     display: flex;
     flex:1;
     justify-content: space-between;
+    flex-direction: column;
 
     
 }
@@ -21,6 +22,7 @@
  height: 150px;
  background-color: rgb(57, 173, 22);
  border-radius: 75px;
+ 
 
 
 }
@@ -54,8 +56,15 @@ gap: 15px;
     background-color: yellow;
     border-color: black;
     border-width: 3px;
-    box-shadow: 2px 2px 2px 2px;
+    box-shadow: -2px 2px 5px;
     text-align: center;
+    position: relative;
+    top:0;
+    transition: top ease 0.2s;
+}
+.recipe-card:hover{
+    top: -10px;
+    background-color: greenyellow;
 
 }
 
