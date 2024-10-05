@@ -1,128 +1,191 @@
-body {
-   margin: 0;
-   padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    color-scheme: light dark;
 
 }
 
-.nav-menu{
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body>main {
+    padding: 20px;
+}
+
+.nav-menu {
     display: flex;
-    
     color: black;
-    
     justify-content: center;
     position: fixed;
     top: 160px;
     right: 0;
     height: 100px;
 }
-.nav-buttons{
+
+.nav-buttons {
     display: flex;
-    flex:1;
+    flex: 1;
     justify-content: space-between;
     flex-direction: column;
-
-    
-}
-.prev-button, .menu-button, .next-button{
- width: 150px;
- height: 150px;
- background-color: rgb(57, 173, 22);
- border-radius: 75px;
- 
-
-
-}
-
-h1{
-
-text-align: center;
-font-size:60px;
-
-
-}
-.flex-recipes{
-padding: 20px;
-display: flex;
-justify-content: center;
-Flex-wrap: wrap;
-gap: 15px;
-
-
-}
-.recipe-photo{
-    width: 750px;
-
 }
 
 
-.recipe-card{
-  
-    
-    width: 300px;
+header>h1 {
+    font-size: 60px;
+    text-shadow: 0 1px 3px black;
+    color: #01d418;
+}
+
+.flex-recipes {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 20px;
+    gap: 15px;
+}
+
+
+
+.recipe-card {
     background-color: yellow;
     border-color: black;
     border-width: 3px;
     box-shadow: -2px 2px 5px;
     text-align: center;
     position: relative;
-    top:0;
+    top: 0;
     transition: top ease 0.2s;
-    color: ;
+
+    & img {
+        max-width: 100%;
+
+    }
 }
-.recipe-card:hover{
+
+.recipe-card:hover {
     top: -10px;
     background-color: greenyellow;
-
 }
 
 
-.steps p{
-
-    font-size: 20px;
-
-
-}
-.description p{
-
-    font-size: 20px;
-
-}
-.header-container{
- background-color: yellow;
- color: black;   
- display: flex;
- 
- 
-
-}
-.logo-svg{
-  width: 80px;
-  margin-left: 10px;
+article>main {
+    padding: 20px;
 }
 
-.header{
-    border: 2px solid #fff;
-    width: 900px;
-    height: 150px;
-    display:flex;
+article figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article figure>img {
     flex: 1;
+    max-width: 760px;
+    min-width: 330px;
+    aspect-ratio: 16/10;
+}
+
+article h2 {
+    font-weight: 900;
+    font-size: 2.3rem;
+    margin-block: 45px;
+}
+
+.description p {
+    font-size: 1.2rem;
+    max-width: 75ch;
+}
+
+.steps p {
+    font-size: 1rem;
+}
+
+main>nav {
+    display: flex;
+    justify-content: center;
+}
+
+main>nav>a {
+    background-color: #0D0;
+    padding: 20px 40px;
+    border-radius: 9px;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        background-color: #0A0;
+    }
+}
+
+
+body>header {
+    background-color: yellow;
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-inline: 20px;
+    height: 150px;
+    box-shadow: 0 1px 5px black;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        font-weight: 900;
+        text-shadow: 0 1px 2px black;
+        font-size: 1.3rem;
+
+    }
+}
+
+.logo-svg {
+    width: 80px;
+}
 
 
-}
-.socials{
-    margin-right: 10px;
-}
-.back-button{
-width: 200px;
-height: 100px;
-background-color: yellow;
+.back-button {
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
 
 }
+
 .recipe-card a {
     text-decoration: none;
-    color:rgb(31, 151, 31);
+    color: rgb(31, 151, 31);
     font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #111;
+    }
+
+    body>header {
+        background-color: darkgreen;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    body>header {
+        justify-content: center;
+    }
+
+    .flex-recipes {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+
+    header>h1 {
+        display: none;
+    }
+
+    header>nav {
+        display: none;
+    }
 
 }
